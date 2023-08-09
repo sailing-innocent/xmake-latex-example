@@ -5,8 +5,9 @@
 - 安装xmake
 - 安装texlive
 - (可选)安装graphviz
+
 编译：
-- `xmake`
+- `xmake` (有时候可能需要两次`xmake`，因为一些执行顺序的原因，还没弄清楚)
 
 然后你可以发现pdf文件在你的`output`文件夹中
 

@@ -22,6 +22,8 @@ Here I demonstrate how to use templates
 
 hint: you have to check the Nato Font installed correctly on your computer for compiling the third example, so by default the example is not open, you can open it by set `xmake f --math_book=true`
 
+TODO: sometime you should double run `xmake` for some order reason.
+
 ## a note example
 
 in `doc/note/inverse_rendering_overview` to show a simple latex note using arxiv template, with bibtex and images
