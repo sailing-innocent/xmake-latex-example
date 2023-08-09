@@ -1,3 +1,6 @@
 includes("arxiv")
 includes("acmart")
-includes("ajbook")
+
+if get_config("math_book") then 
+    includes("albook")
+end
