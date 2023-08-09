@@ -1,6 +1,6 @@
 # xmake + latex project example
 
-use xmake and latex to 
+use xmake and latex to build document gracefully.
 
 ## How to build
 
