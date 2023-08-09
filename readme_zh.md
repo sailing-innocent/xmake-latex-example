@@ -12,7 +12,7 @@
 
 这里我们有三个常用的模板，分别是arxiv模板，acmart模板，以及李文威老师的《代数学方法》书籍模板：https://github.com/wenweili/AlJabr-1
 
-注意想要编译第三个模板需要配置Nato Sans CJK SC Bold和Nato Serif SC Bold字体。
+注意想要编译第三个模板需要配置Nato Sans CJK SC Bold和Nato Serif SC Bold字体。所以默认关闭，使用`xmake f --math_book=true`打开。
 
 支持图片对象，图片依赖，支持bibtex，支持input分文件tex，具体可以参考各个测试例子。
 
