@@ -1,0 +1,8 @@
+target("aljabr")
+    add_rules("latex")
+    add_files("*.tex", "*.bib", "*.png")
+    add_deps("ajbook", { order = true })
+    on_load(function (target)
+        target:set("latex_main", "main.tex")
+    end)
+target_end()

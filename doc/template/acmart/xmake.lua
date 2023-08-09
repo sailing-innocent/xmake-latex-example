@@ -1,0 +1,5 @@
+target("acmart")
+    add_rules("template")
+    add_files("*.cls")
+    add_files("*.bst")
+target_end()

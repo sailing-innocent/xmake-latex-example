@@ -1,0 +1,8 @@
+target("inverse_rendering_overview")
+    add_rules("latex")
+    add_files("**.tex", "*.bib", "*.png")
+    add_deps("arxiv", { order = true })
+    on_load(function (target)
+        target:set("latex_main", "main.tex")
+    end)
+target_end()
