@@ -84,10 +84,11 @@ rule("latex")
         import("lib.detect.find_tool")
         import("core.project.depend")
         import("utils.progress")
-        os.cd(target:targetdir())
+        os.cd(target:targetdir()) -- enter build file
         local latexmk = assert(find_tool("latexmk"), "latexmk not found!")
         progress.show(opt.progress, "building %s.pdf", target:name())
         os.vrunv(latexmk.program, {"-pdf", "-xelatex"})
+        os.cd("$(projectdir)") -- back to project root
     end)
     after_link(function (target, opt)
         import("utils.progress")
@@ -98,7 +99,8 @@ rule("latex")
             latex_main = 'main.tex'
         end 
         if (latex_out ~= nil) then 
-            os.trycp(path.join(target:targetdir(), path.basename(latex_main) .. ".pdf"), path.join(latex_out, target:name() .. ".pdf"))
+            progress.show(opt.progress, "copy %s.pdf to %s", target:name(), latex_out)
+            os.cp(path.join(target:targetdir(), path.basename(latex_main) .. ".pdf"), path.join(latex_out, target:name() .. ".pdf"))
         end 
     end)
     on_clean(function (target)
