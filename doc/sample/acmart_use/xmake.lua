@@ -1,8 +1,9 @@
 target("acmart_use")
+    add_deps("acmart")
+    add_deps("test_fig_1")
     add_rules("latex")
     add_files("main.tex")
-    add_deps("acmart", { order = true })
-    add_deps("test_fig_1", { order = true })
+
     on_load(function (target)
         target:set("latex_main", "main.tex")
     end)

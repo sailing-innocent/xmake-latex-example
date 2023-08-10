@@ -18,11 +18,13 @@ Here I demonstrate how to use templates
 
 - arxiv: a single arxiv.sty file, see `doc/template/arxiv` and `doc/sample/arxiv_use` for more info
 - acmart: an acmart.cls with Format.dst, see `doc/template/acmart` and `doc/sample/acmart_use` for more info
-- AIJabr book: a comprehensive mathematic book example from https://github.com/wenweili/AlJabr-1, see `doc/template/ajbook` and `doc/sample/aijabr` for more info
+- AIJabr book: a comprehensive mathematic book example from https://github.com/wenweili/AlJabr-1, see `doc/template/ajbook` and `doc/sample/aljabr` for more info
 
 hint: you have to check the Nato Font installed correctly on your computer for compiling the third example, so by default the example is not open, you can open it by set `xmake f --math_book=true`
 
-TODO: sometime you should double run `xmake` for some order reason.
+- Noto Sans CJK: https://github.com/notofonts/noto-cjk/releases/tag/Sans2.004
+- Noto Serif: https://fonts.google.com/noto/specimen/Noto+Serif+SC
+
 
 ## a note example
 

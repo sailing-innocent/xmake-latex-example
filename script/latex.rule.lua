@@ -34,6 +34,30 @@ rule("latex")
     on_load(function (target)
         target:set("targetdir", path.join("build", "doc", target:name()))
         os.mkdir(target:targetdir())
+    end)
+
+    after_load(function (target)
+        -- generate .latexmkrc
+        local latexmkrc = path.join(target:targetdir(), ".latexmkrc")
+        -- clear if exist
+        os.tryrm(latexmkrc)
+        local file = io.open(latexmkrc, "w")
+        local latex_main = target:get("latex_main")
+        if latex_main == nil then 
+            latex_main = 'main.tex'
+        end 
+        file:print("@default_files = ('".. latex_main .. "');")
+        file:close()
+    end)
+
+    on_build_file(function (target, sourcefile, opt)
+        import("utils.progress")
+        print("building file: %s", sourcefile)
+        os.cp(sourcefile, target:targetdir())
+        progress.show(opt.progress, "building %s", sourcefile)
+    end)
+    
+    before_link(function (target)
         function check_is_asset_image(name) 
             local img_ext_list = {".png", ".jpg", ".jpeg", ".pdf"}
             for _, ext in ipairs(img_ext_list) do
@@ -56,27 +80,6 @@ rule("latex")
             end
         end
     end)
-
-    after_load(function (target)
-        -- generate .latexmkrc
-        local latexmkrc = path.join(target:targetdir(), ".latexmkrc")
-        -- clear if exist
-        os.tryrm(latexmkrc)
-        local file = io.open(latexmkrc, "w")
-        local latex_main = target:get("latex_main")
-        if latex_main == nil then 
-            latex_main = 'main.tex'
-        end 
-        file:print("@default_files = ('".. latex_main .. "');")
-        file:close()
-    end)
-    on_build_file(function (target, sourcefile, opt)
-        import("utils.progress")
-        print("building file: %s", sourcefile)
-        os.cp(sourcefile, target:targetdir())
-        progress.show(opt.progress, "building %s", sourcefile)
-    end)
-    
     on_link(function (target, opt)
         import("lib.detect.find_tool")
         import("core.project.depend")
@@ -86,7 +89,7 @@ rule("latex")
         progress.show(opt.progress, "building %s.pdf", target:name())
         os.vrunv(latexmk.program, {"-pdf", "-xelatex"})
     end)
-    after_build(function (target, opt)
+    after_link(function (target, opt)
         import("utils.progress")
         progress.show(opt.progress, "build %s.pdf done", target:name())
         local latex_out = get_config("latex_out")

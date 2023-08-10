@@ -1,7 +1,7 @@
 target("arxiv_use")
+    add_deps("arxiv")
     add_rules("latex")
     add_files("main.tex", "*.bib")
-    add_deps("arxiv", { order = true })
     on_load(function (target)
         target:set("latex_main", "main.tex")
     end)
