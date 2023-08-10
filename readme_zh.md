@@ -28,7 +28,32 @@ latex虽然自带一些编译构建工具，但是往往有先天的不足，比
 
 我们的主要思路是重载`on_build_file`过程，把这个过程改为单纯的复制粘贴，从而把一个方便人类阅读的项目在指定的targetdir上重新组装成一个方便latex构建的文件目录（就如一般latex项目的一坨巨大的文件），通过依赖管理模板，图片和索引数据库的资源。进而在`on_link`的过程中使用`latexmk`来真正进行编译。最后将结果输出到项目/output 目录下。
 
+最终实现的效果如下：
 
+在doc下的目录树如图
+
+![](asset/project_tree.png)
+
+- template: 用来存放各种模板文件
+- note: 用来存放个人的笔记文件
+- report: 用来存放组会报告文件
+- sample: 一些测试用例
+- figure: 一些复杂重要的图，包括直接使用的png或者利用tikz或者graphviz等工具间接编译构建的图。
+
+对于一个具体的tex项目，我们只需要写一个这样的脚本
+
+```lua
+target("inverse_rendering_overview")
+    add_deps("arxiv")
+    add_rules("latex")
+    add_files("**.tex", "*.bib", "*.png")
+    on_load(function (target)
+        target:set("latex_main", "main.tex")
+    end)
+target_end()
+```
+
+可以指定该项目使用arxiv模板，并且使用目录下的tex文件（包括input的子文件），图片文件，以及索引数据库文件。并且指定main.tex为主文件。这样我们就可以使用`xmake`来编译这个项目了。
 
 
 ## 模板
