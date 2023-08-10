@@ -27,10 +27,26 @@ hint: you have to check the Nato Font installed correctly on your computer for c
 
 remember to install for all users and force clean cache by `fc-cache`
 
+### Arxiv Use
+
+![](./asset/arxiv_use.png)
+
+### ACMART Use
+
+![](./asset/acmart.png)
+
+### AIJabr Book Use
+
+![](./asset/aljabr.png)
+
 ## a note example
 
 in `doc/note/inverse_rendering_overview` to show a simple note using arxiv template, with bibtex and images, can be used for your homework or personal research note.
 
+![](./asset/research_note_example.png)
+
 ## a pre example
 
 in `doc/report/wm20230428` we show an weekly meeting example for a research group, with bibtex
+
+![](./asset/weekly_slide_example.png)

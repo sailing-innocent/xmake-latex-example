@@ -11,17 +11,6 @@
 
 然后你可以发现pdf文件在你的`output`文件夹中
 
-这里我们有三个常用的模板，分别是arxiv模板，acmart模板，以及李文威老师的《代数学方法》书籍模板：https://github.com/wenweili/AlJabr-1
-
-注意想要编译第三个模板需要配置Nato Sans CJK SC Bold和Nato Serif SC Bold字体。所以默认关闭，使用`xmake f --math_book=true`打开。
-
-- Noto Sans CJK: https://github.com/notofonts/noto-cjk/releases/tag/Sans2.004
-- Noto Serif: https://fonts.google.com/noto/specimen/Noto+Serif+SC
-
-注意可能需要选择“为所有用户安装”并尝试`fc-cache`清理缓存，否则latexmk可能会找不到字体。
-
-支持图片对象，图片依赖，支持bibtex，支持input分文件tex，具体可以参考各个测试例子。
-
 ## 思路
 
 latex虽然自带一些编译构建工具，但是往往有先天的不足，比如
@@ -41,3 +30,40 @@ latex虽然自带一些编译构建工具，但是往往有先天的不足，比
 
 
 
+
+## 模板
+
+这里我们有三个常用的模板，分别是arxiv模板，acmart模板，以及李文威老师的《代数学方法》书籍模板：https://github.com/wenweili/AlJabr-1
+
+注意想要编译第三个模板需要配置Nato Sans CJK SC Bold和Nato Serif SC Bold字体。所以默认关闭，使用`xmake f --math_book=true`打开。
+
+- Noto Sans CJK: https://github.com/notofonts/noto-cjk/releases/tag/Sans2.004
+- Noto Serif: https://fonts.google.com/noto/specimen/Noto+Serif+SC
+
+注意可能需要选择“为所有用户安装”并尝试`fc-cache`清理缓存，否则latexmk可能会找不到字体。
+
+支持图片对象，图片依赖，支持bibtex，支持input分文件tex，具体可以参考各个测试例子。
+
+### Arxiv Use
+
+![](./asset/arxiv_use.png)
+
+### ACMART Use
+
+![](./asset/acmart.png)
+
+### AIJabr Book Use
+
+![](./asset/aljabr.png)
+
+## a note example
+
+在 `doc/note/inverse_rendering_overview` 有一个简单的笔记例子，使用了bibtex和图像
+
+![](./asset/research_note_example.png)
+
+## a pre example
+
+在`doc/report/wm20230428`展示了一个简单的科研组会报告例子，有bibtex依赖
+
+![](./asset/weekly_slide_example.png)
