@@ -18,6 +18,8 @@
 - Noto Sans CJK: https://github.com/notofonts/noto-cjk/releases/tag/Sans2.004
 - Noto Serif: https://fonts.google.com/noto/specimen/Noto+Serif+SC
 
+注意可能需要选择“为所有用户安装”并尝试`fc-cache`清理缓存，否则latexmk可能会找不到字体。
+
 支持图片对象，图片依赖，支持bibtex，支持input分文件tex，具体可以参考各个测试例子。
 
 ## 思路

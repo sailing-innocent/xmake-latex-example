@@ -1,0 +1,146 @@
+\documentclass[10pt, hyperref={colorlinks=true,linkcolor=blue},xcolor=dvipsnames]{beamer}
+%----------------------------------------------------------------------------------------
+%	FUNCTIONAL SETTINGS
+%----------------------------------------------------------------------------------------
+
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+
+% defines
+
+%----------------------------------------------------------------------------------------
+%	STYLES AND THEME
+%----------------------------------------------------------------------------------------
+
+\setbeamertemplate{bibliography item}[text]
+\usepackage{booktabs}
+\usetheme{Dresden}
+\usecolortheme{dove}
+\usefonttheme{structureitalicserif} 
+\usepackage{mathptmx}
+\usepackage{inconsolata}
+\usepackage[default]{lato}
+\useinnertheme{rectangles}
+
+\useoutertheme{shadow}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION INFORMATION
+%----------------------------------------------------------------------------------------
+
+
+\title[title]{ Recent Research Progress }
+
+\subtitle{Since \today}
+
+\author[SailingInnocent]{\texorpdfstring{sailing-innocent \\ \smallskip \textit{ some@email.com}}{}}
+
+\date[\today]{\texorpdfstring{Weekly Meeting \\ \today}{}}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{TOC}
+    \tableofcontents
+\end{frame}
+
+\section{Recent Progress in NeRF}
+
+\begin{frame}
+    \frametitle{Existing Surveys}
+    \begin{enumerate}
+        \item Apr20th, 2023, Arxiv WIP, Neural Radiance Field, past, present and future \cite{mittalNeuralRadianceFields2023}
+        \item Oct1st, 2023, Arxiv, NeRF: Neural Radiance Field in 3D Vision, A Review \cite{gaoNeRFNeuralRadiance2022}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Timeline}
+    \begin{itemize}
+        \item 2020 ECCV Oral: NeRF: Neural Radiance Field \cite{mildenhallNeRFRepresentingScenes2020} the original paper
+        \item 2021 CVPR: NeRF in the wild \cite{martin-bruallaNeRFWildNeural2021} extend the landscape mark
+        \item 2021 CVPR: GIRAFFE: Representing Scenes as Composition Generative Neural Feature Fields\cite{niemeyerGIRAFFERepresentingScenes2021} combines NeRF with GAN
+        \item 2021 ICCV: Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields\cite{barronMipNeRFMultiscaleRepresentation2021} antiliasing for better resolution
+        \item 2021 ICCV: Unisurf: Unifying Neural Implicit Surfaces and Radiance Fields for Multi View Reconstruction \cite{oechsleUNISURFUnifyingNeural2021} reconstruct surface
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Timeline}
+    \begin{itemize}
+        \item 2022 CVPR: CLIP NeRF\cite{wangCLIPNeRFTextandImageDriven2022} tries text-to-scene
+        \item 2022 CVPR: NeRF RGB-D\cite{azinovicNeuralRGBDSurface2022} depth for reconstruction
+        \item 2022 CVPR: PointNeRF\cite{xuPointNeRFPointbasedNeurala} transform NeRF with Point Cloud
+        \item 2022 CVPR: Direct Voxel Grid Optimization Super Fast Convergence for Radiance  Fields Reconstruction \cite{sunDirectVoxelGrid2022} using voxel and acc struct
+        \item 2022 CVPR: Giraffe HD \cite{xueGIRAFFEHDHighResolution2022}, the successor of Giraffe\cite{niemeyerGIRAFFERepresentingScenes2021}
+        \item 2022 CVPR: Mip NeRF 360 \cite{barronMipNeRF360Unbounded2022}, the successor of MipNeRF\cite{barronMipNeRFMultiscaleRepresentation2021}
+        \item 2022 SIGGRAPH: Instant NGP \cite{mullerInstantNeuralGraphics2022}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Current Trends}
+    Low Hanging Fruits has almost been picked up
+    \begin{enumerate}
+        \item rare transform representation
+        \item combine with generative model
+        \item extension
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Rare Transform Representation}
+    \begin{enumerate}
+        \item 2023 arxiv, tetrahedra\cite{kulhanekTetraNeRFRepresentingNeural2023}
+        \item 2023 CVPR, NeuralUDF\cite{liuNeUDFLeaningNeural2023}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Combine With Generative Model}
+    \begin{enumerate}
+        \item 2023 CVPR Lift3D \cite{liLift3DSynthesize3D2023} for 3D GAN
+        \item 2023 CVPR NeRDi \cite{dengNeRDiSingleViewNeRF2022} for diffusion model
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Various Extension}
+    \begin{enumerate}
+        \item 2023 CVPR Nope NeRF \cite{bianNoPeNeRFOptimisingNeural2023} free the camera primitive
+        \item 2023 CVPR FreeNeRF \cite{yangFreeNeRFImprovingFewshot2023} for frequency encoding
+        \item 2023 MeRF\cite{reiserMERFMemoryEfficientRadiance2023} for memory efficiency
+        \item 2023 CVPR NeRFLix \cite{zhouNeRFLiXHighQualityNeural2023} for high resolution
+        \item 2023 CVPR Deblur NeRF \cite{leeDPNeRFDeblurredNeural2023}
+        \item 2023 CVPR Large Urban Scene \cite{xuGridguidedNeuralRadiance2023}
+        \item 2023 NeRFDiff \cite{guNerfDiffSingleimageView2023} for occusion and differential rendering
+        \item 2023 CVPR SeaThru NeRF, only videos, for water transmitance
+    \end{enumerate}
+\end{frame}
+
+\section{Personal Interest}
+
+\begin{frame}
+    \frametitle{My topics in next half years}
+    \begin{enumerate}
+        \item NeRF Composition Problem, with SAM\cite{kirillovSegmentAnything2023} like Anything 3D\cite{shenAnything3DSingleviewAnything2023}
+        \item Similarity among Radiance Field and Fluid Field, like PAC-NeRF\cite{liPACNeRFPhysicsAugmented2023}, ICLR 2023
+        \item NeRF transfering problem
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Reference}
+    \bibliography{20230428}
+    \bibliographystyle{plain}
+\end{frame}
+
+\end{document}

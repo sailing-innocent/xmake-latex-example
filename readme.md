@@ -25,8 +25,12 @@ hint: you have to check the Nato Font installed correctly on your computer for c
 - Noto Sans CJK: https://github.com/notofonts/noto-cjk/releases/tag/Sans2.004
 - Noto Serif: https://fonts.google.com/noto/specimen/Noto+Serif+SC
 
+remember to install for all users and force clean cache by `fc-cache`
 
 ## a note example
 
-in `doc/note/inverse_rendering_overview` to show a simple latex note using arxiv template, with bibtex and images
+in `doc/note/inverse_rendering_overview` to show a simple note using arxiv template, with bibtex and images, can be used for your homework or personal research note.
 
+## a pre example
+
+in `doc/report/wm20230428` we show an weekly meeting example for a research group, with bibtex
