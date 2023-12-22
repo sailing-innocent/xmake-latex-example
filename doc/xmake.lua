@@ -1,5 +1,5 @@
 includes("template")
 includes("figure")
 includes("sample")
-includes("report")
-includes("note")
+-- includes("report")
+-- includes("note")

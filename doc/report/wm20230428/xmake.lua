@@ -1,7 +1,0 @@
-target("wm20230428_pre")
-    add_rules("latex")
-    add_files("pre.tex", "*.bib")
-    on_load(function (target)
-        target:set("latex_main", "pre.tex")
-    end)
-target_end()

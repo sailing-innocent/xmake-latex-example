@@ -1,1 +1,2 @@
-includes("graphviz_sample")
+includes("asset_sample")
+-- includes("graphviz_sample")
