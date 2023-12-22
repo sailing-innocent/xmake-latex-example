@@ -1,0 +1,14 @@
+Two MLPs were trained using back-propogation as
+\begin{itemize}
+    \item Generative Model G
+    \item Discriminative Model D
+\end{itemize}
+
+The Generative Model captures data distribution.
+The Discriminative Model estimates the probability that a sample is from trained data or not.
+
+\textbf{Ideal Result}:
+\begin{itemize}
+    \item G could generate the data in trained set
+    \item D equal to $\frac{1}{2}$ ( so that it cannot determine whether the generated data is from trained set or not)
+\end{itemize}

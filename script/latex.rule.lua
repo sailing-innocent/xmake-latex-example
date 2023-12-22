@@ -34,10 +34,13 @@ rule("latex-content")
     end) 
 rule_end()
 
-function add_content(name)
+function add_content(name, deps)
     target(name)
         add_rules("latex-content")
         add_files(name .. ".tex")
+        if (deps ~= nil) then 
+            add_deps(deps)
+        end
     target_end()
 end
 
