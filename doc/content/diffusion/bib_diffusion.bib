@@ -1,0 +1,107 @@
+@online{esserTamingTransformersHighResolution2021,
+  title = {Taming {{Transformers}} for {{High-Resolution Image Synthesis}}},
+  author = {Esser, Patrick and Rombach, Robin and Ommer, Björn},
+  date = {2021-06-23},
+  eprint = {2012.09841},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2012.09841},
+  url = {http://arxiv.org/abs/2012.09841},
+  urldate = {2023-10-16},
+  abstract = {Designed to learn long-range interactions on sequential data, transformers continue to show state-of-the-art results on a wide variety of tasks. In contrast to CNNs, they contain no inductive bias that prioritizes local interactions. This makes them expressive, but also computationally infeasible for long sequences, such as high-resolution images. We demonstrate how combining the effectiveness of the inductive bias of CNNs with the expressivity of transformers enables them to model and thereby synthesize high-resolution images. We show how to (i) use CNNs to learn a context-rich vocabulary of image constituents, and in turn (ii) utilize transformers to efficiently model their composition within high-resolution images. Our approach is readily applied to conditional synthesis tasks, where both non-spatial information, such as object classes, and spatial information, such as segmentations, can control the generated image. In particular, we present the first results on semantically-guided synthesis of megapixel images with transformers and obtain the state of the art among autoregressive models on class-conditional ImageNet. Code and pretrained models can be found at https://github.com/CompVis/taming-transformers .},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  file = {E\:\\data\\zotero\\storage\\5V9DIQMZ\\Esser 等 - 2021 - Taming Transformers for High-Resolution Image Synt.pdf;E\:\\data\\zotero\\storage\\YAVL9LJJ\\2012.html}
+}
+
+@online{hoDenoisingDiffusionProbabilistic2020,
+  title = {Denoising {{Diffusion Probabilistic Models}}},
+  author = {Ho, Jonathan and Jain, Ajay and Abbeel, Pieter},
+  date = {2020-12-16},
+  eprint = {2006.11239},
+  eprinttype = {arxiv},
+  eprintclass = {cs, stat},
+  doi = {10.48550/arXiv.2006.11239},
+  url = {http://arxiv.org/abs/2006.11239},
+  urldate = {2023-10-30},
+  abstract = {We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics. Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score matching with Langevin dynamics, and our models naturally admit a progressive lossy decompression scheme that can be interpreted as a generalization of autoregressive decoding. On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17. On 256x256 LSUN, we obtain sample quality similar to ProgressiveGAN. Our implementation is available at https://github.com/hojonathanho/diffusion},
+  pubstate = {preprint},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {E\:\\data\\zotero\\storage\\RGV9LF8R\\Ho 等 - 2020 - Denoising Diffusion Probabilistic Models.pdf;E\:\\data\\zotero\\storage\\BNSECCBA\\2006.html}
+}
+
+@online{huLoRALowRankAdaptation2021,
+  title = {{{LoRA}}: {{Low-Rank Adaptation}} of {{Large Language Models}}},
+  shorttitle = {{{LoRA}}},
+  author = {Hu, Edward J. and Shen, Yelong and Wallis, Phillip and Allen-Zhu, Zeyuan and Li, Yuanzhi and Wang, Shean and Wang, Lu and Chen, Weizhu},
+  date = {2021-10-16},
+  eprint = {2106.09685},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2106.09685},
+  url = {http://arxiv.org/abs/2106.09685},
+  urldate = {2023-10-16},
+  abstract = {An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {E\:\\data\\zotero\\storage\\TV43NLWX\\Hu 等 - 2021 - LoRA Low-Rank Adaptation of Large Language Models.pdf;E\:\\data\\zotero\\storage\\3HXJCA63\\2106.html}
+}
+
+@online{nealAnnealedImportanceSampling1998,
+  title = {Annealed {{Importance Sampling}}},
+  author = {Neal, Radford M.},
+  date = {1998-09-04},
+  eprint = {physics/9803008},
+  eprinttype = {arxiv},
+  url = {http://arxiv.org/abs/physics/9803008},
+  urldate = {2023-10-16},
+  abstract = {Simulated annealing - moving from a tractable distribution to a distribution of interest via a sequence of intermediate distributions - has traditionally been used as an inexact method of handling isolated modes in Markov chain samplers. Here, it is shown how one can use the Markov chain transitions for such an annealing sequence to define an importance sampler. The Markov chain aspect allows this method to perform acceptably even for high-dimensional problems, where finding good importance sampling distributions would otherwise be very difficult, while the use of importance weights ensures that the estimates found converge to the correct values as the number of annealing runs increases. This annealed importance sampling procedure resembles the second half of the previously-studied tempered transitions, and can be seen as a generalization of a recently-proposed variant of sequential importance sampling. It is also related to thermodynamic integration methods for estimating ratios of normalizing constants. Annealed importance sampling is most attractive when isolated modes are present, or when estimates of normalizing constants are required, but it may also be more generally useful, since its independent sampling allows one to bypass some of the problems of assessing convergence and autocorrelation in Markov chain samplers.},
+  pubstate = {preprint},
+  keywords = {Physics - Computational Physics,{Physics - Data Analysis, Statistics and Probability}},
+  file = {E\:\\data\\zotero\\storage\\V4WRQPTI\\Neal - 1998 - Annealed Importance Sampling.pdf;E\:\\data\\zotero\\storage\\PM5SDIA3\\9803008.html}
+}
+
+@online{rombachHighResolutionImageSynthesis2022,
+  title = {High-{{Resolution Image Synthesis}} with {{Latent Diffusion Models}}},
+  author = {Rombach, Robin and Blattmann, Andreas and Lorenz, Dominik and Esser, Patrick and Ommer, Björn},
+  date = {2022-04-13},
+  eprint = {2112.10752},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  url = {http://arxiv.org/abs/2112.10752},
+  urldate = {2023-10-16},
+  abstract = {By decomposing the image formation process into a sequential application of denoising autoencoders, diffusion models (DMs) achieve state-of-the-art synthesis results on image data and beyond. Additionally, their formulation allows for a guiding mechanism to control the image generation process without retraining. However, since these models typically operate directly in pixel space, optimization of powerful DMs often consumes hundreds of GPU days and inference is expensive due to sequential evaluations. To enable DM training on limited computational resources while retaining their quality and flexibility, we apply them in the latent space of powerful pretrained autoencoders. In contrast to previous work, training diffusion models on such a representation allows for the first time to reach a near-optimal point between complexity reduction and detail preservation, greatly boosting visual fidelity. By introducing cross-attention layers into the model architecture, we turn diffusion models into powerful and flexible generators for general conditioning inputs such as text or bounding boxes and high-resolution synthesis becomes possible in a convolutional manner. Our latent diffusion models (LDMs) achieve a new state of the art for image inpainting and highly competitive performance on various tasks, including unconditional image generation, semantic scene synthesis, and super-resolution, while significantly reducing computational requirements compared to pixel-based DMs. Code is available at https://github.com/CompVis/latent-diffusion .},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  file = {E\:\\data\\zotero\\storage\\B4XJUU8Z\\Rombach 等 - 2022 - High-Resolution Image Synthesis with Latent Diffus.pdf;E\:\\data\\zotero\\storage\\82WUZD22\\2112.html}
+}
+
+@online{sohl-dicksteinDeepUnsupervisedLearning2015,
+  title = {Deep {{Unsupervised Learning}} Using {{Nonequilibrium Thermodynamics}}},
+  author = {Sohl-Dickstein, Jascha and Weiss, Eric A. and Maheswaranathan, Niru and Ganguli, Surya},
+  date = {2015-11-18},
+  eprint = {1503.03585},
+  eprinttype = {arxiv},
+  eprintclass = {cond-mat, q-bio, stat},
+  url = {http://arxiv.org/abs/1503.03585},
+  urldate = {2023-10-16},
+  abstract = {A central problem in machine learning involves modeling complex data-sets using highly flexible families of probability distributions in which learning, sampling, inference, and evaluation are still analytically or computationally tractable. Here, we develop an approach that simultaneously achieves both flexibility and tractability. The essential idea, inspired by non-equilibrium statistical physics, is to systematically and slowly destroy structure in a data distribution through an iterative forward diffusion process. We then learn a reverse diffusion process that restores structure in data, yielding a highly flexible and tractable generative model of the data. This approach allows us to rapidly learn, sample from, and evaluate probabilities in deep generative models with thousands of layers or time steps, as well as to compute conditional and posterior probabilities under the learned model. We additionally release an open source reference implementation of the algorithm.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Machine Learning,Condensed Matter - Disordered Systems and Neural Networks,Quantitative Biology - Neurons and Cognition,Statistics - Machine Learning},
+  file = {E\:\\data\\zotero\\storage\\IIH8I6AA\\Sohl-Dickstein 等 - 2015 - Deep Unsupervised Learning using Nonequilibrium Th.pdf;E\:\\data\\zotero\\storage\\WDJHZM5H\\1503.html}
+}
+
+@online{zhangAddingConditionalControl2023,
+  title = {Adding {{Conditional Control}} to {{Text-to-Image Diffusion Models}}},
+  author = {Zhang, Lvmin and Rao, Anyi and Agrawala, Maneesh},
+  date = {2023-09-02},
+  eprint = {2302.05543},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  url = {http://arxiv.org/abs/2302.05543},
+  urldate = {2023-10-16},
+  abstract = {We present ControlNet, a neural network architecture to add spatial conditioning controls to large, pretrained text-to-image diffusion models. ControlNet locks the production-ready large diffusion models, and reuses their deep and robust encoding layers pretrained with billions of images as a strong backbone to learn a diverse set of conditional controls. The neural architecture is connected with "zero convolutions" (zero-initialized convolution layers) that progressively grow the parameters from zero and ensure that no harmful noise could affect the finetuning. We test various conditioning controls, eg, edges, depth, segmentation, human pose, etc, with Stable Diffusion, using single or multiple conditions, with or without prompts. We show that the training of ControlNets is robust with small ({$<$}50k) and large ({$>$}1m) datasets. Extensive results show that ControlNet may facilitate wider applications to control image diffusion models.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Graphics,Computer Science - Human-Computer Interaction,Computer Science - Multimedia},
+  file = {E\:\\data\\zotero\\storage\\5MYGKDUP\\Zhang 等 - 2023 - Adding Conditional Control to Text-to-Image Diffus.pdf;E\:\\data\\zotero\\storage\\U6YTPSEU\\2302.html}
+}
