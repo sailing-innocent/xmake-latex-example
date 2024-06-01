@@ -58,7 +58,7 @@ target_end()
 
 ## 模板
 
-这里我们有三个常用的模板，分别是arxiv模板，acmart模板，以及李文威老师的《代数学方法》书籍模板：https://github.com/wenweili/AlJabr-1
+这里我们有三个常用的模板，分别是arxiv模板，acmart模板，以及李文威老师的《代数学方法》书籍模板：https://github.com/wenweili/AlJabr-1，后续添加了南大工管的pre模板，以及eccv和cvpr的模板
 
 注意想要编译第三个模板需要配置Nato Sans CJK SC Bold和Nato Serif SC Bold字体。所以默认关闭，使用`xmake f --math_book=true`打开。
 
