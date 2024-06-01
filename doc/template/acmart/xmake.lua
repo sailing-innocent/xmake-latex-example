@@ -1,5 +1,4 @@
 target("acmart")
-    add_rules("template")
-    add_files("*.cls")
-    add_files("*.bst")
+    add_rules("latex.template")
+    add_files("*.cls", "*.bst")
 target_end()

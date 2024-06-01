@@ -1,4 +1,4 @@
-add_bib("bib_gan")
+add_bib("gan")
 add_img("fig_gan_wiki")
 add_content("content_gan_brief")
 add_content("content_gan_loss")

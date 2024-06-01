@@ -1,4 +1,10 @@
 target("arxiv")
-    add_rules("template")
+    add_rules("latex.template")
     add_files("arxiv.sty")
+target_end()
+
+target("arxiv_art")
+    add_rules("latex.template")
+    add_files("arxiv.sty")
+    add_files("arxiv_art.cls")
 target_end()

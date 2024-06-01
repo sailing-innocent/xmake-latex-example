@@ -78,7 +78,7 @@
     \usebeamerfont{author in head/foot}\insertshortdate
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.485\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
-   \usebeamerfont{author in head/foot}{南京大学xx学院}
+   \usebeamerfont{author in head/foot}{南京大学工程管理学院}
   \end{beamercolorbox}%
    \begin{beamercolorbox}[wd=0.065\paperwidth,ht=2.25ex,dp=1ex,right]{title in head/foot}%
     \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
@@ -90,14 +90,14 @@
 \defbeamertemplate*{headline}{nju theme}{%
   \leavevmode%
   \@tempdimb=6.4375ex%
-    \pgfdeclareimage[height=.95\@tempdimb]{logo}{njupre/njulogo.png}%
+    \pgfdeclareimage[height=.95\@tempdimb]{logo}{njupre/njulogo.jpg}%
     \pgfdeclareimage[height=1.\@tempdimb]{title_logo}{njupre/njuname.png}%
-    \pgfdeclareimage[height=1.\@tempdimb]{school_logo}{njupre/school.png}%
+    \pgfdeclareimage[height=1.\@tempdimb]{sme_logo}{njupre/njusme.png}%
   \logo{\pgfuseimage{logo}}%
   \ifdim\@tempdimb>0pt%
     \advance\@tempdimb by 1.125ex%
      \begin{beamercolorbox}[wd=.3\paperwidth,ht=\@tempdimb,center]{subsection in head/foot}%
-      \vbox to\@tempdimb{\vfil\pgfuseimage{school_logo}\vfil}%
+      \vbox to\@tempdimb{\vfil\pgfuseimage{sme_logo}\vfil}%
     \end{beamercolorbox}%
     \begin{beamercolorbox}[wd=.5\paperwidth,ht=\@tempdimb]{subsection in head/foot}%
       \vbox to\@tempdimb{\vfil\insertsectionnavigationhorizontal{.5\textwidth}{\hskip0pt 

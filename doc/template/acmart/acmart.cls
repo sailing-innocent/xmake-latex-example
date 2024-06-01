@@ -37,7 +37,7 @@
 %%   Right brace   \}     Tilde         \~}
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{acmart}
+\ProvidesClass{acmart/acmart}
 [2022/10/24 v1.88 Typesetting articles for the Association for Computing Machinery]
 \def\@classname{acmart}
 \InputIfFileExists{acmart-preload-hook.tex}{%
@@ -595,10 +595,11 @@
         \rule\z@\footnotesep\ignorespaces#1\@finalstrut\strutbox}%
     \color@endgroup}}
 \def\@makefnmark{\hbox{\@textsuperscript{\normalfont\@thefnmark}}}
+\RequirePackage[bookmarksnumbered,unicode]{hyperref}
 \RequirePackage{hyperxmp}
 \let\@footnotemark@nolink\@footnotemark
 \let\@footnotetext@nolink\@footnotetext
-\RequirePackage[bookmarksnumbered,unicode]{hyperref}
+
 \pdfstringdefDisableCommands{%
   \def\addtocounter#1#2{}%
   \def\unskip{}%
